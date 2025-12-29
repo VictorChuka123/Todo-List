@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoFlow - Task Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="todo.js"></script>
+  </head>
+  <body class="bg-gray-50">
+    <nav
+      class="bg-gradient-to-r from-blue-600 to-blue-800 p-6 text-white shadow-xl sticky top-0 top-50 py-2"
+    >
+      <div
+        class="container mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <div class="flex items-center text-3xl gap-3">
+          <span>✓</span>
+          <h1 class="font-bold">TodoFlow</h1>
+        </div>
+        <ul class="hidden md:flex gap-8">
+          <li>
+            <a
+              href="#"
+              class="hover:text-blue-200 transition-duration-300 font-medium"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-blue-200 transition-duration-300 font-medium"
+              >Tasks</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-blue-200 transition-duration-300 font-medium"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-blue-200 transition-duration-300 font-medium"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <button
+          class="bg-blue-500 hover:bg-blue-300 text-blue-200 px-6 py-2 rounded-full transition-duration-300 text-white font-bold"
+        >
+          Sign In
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <div
+      class="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 rounded-1.5xl"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-5xl font-bold text-grey-800 mb-4">
+          Stay Organized, Get More Done
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Your personal task Management assistant
+        </p>
+        <button
+          class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg text-white font-bold shadow-lg hover:shadow-xl"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-duration-300"
+        >
+          <div class="text-4xl mb-4">📋</div>
+          <h3 class="text-xl font-bold text-gray-800">Organize Tasks</h3>
+          <p class="text-gray-600">
+            Keep track of all your tasks in one place with an intuitive
+            interface.
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-duration-300"
+        >
+          <div class="text-4xl mb-4">⏰</div>
+          <h3 class="text-xl font-bold text-gray-800">Set Priorites</h3>
+          <p class="text-gray-600">
+            Prioritize tasks by importance and deadline to maximiz productivity.
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-duration-300"
+        >
+          <div class="text-4xl mb-4">✨</div>
+          <h3 class="text-xl font-bold text-gray-800">Track Progress</h3>
+          <p class="text-gray-600">
+            Monitor your progress and celebrate completed tasks along the way.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input Section -->
+    <div class="bg-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto mb-8">
+      <h3 class="text-2xl text-gray-800 font-bold mb-6">Create New Task</h3>
+      <div class="flex flex-col gap-4">
+        <input
+          type="text"
+          class="border-2 border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition js-Task-input"
+          placeholder="Enter your task here..."
+        />
+
+        <input
+          type="date"
+          class="border-2 border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition js-task-date"
+        />
+
+        <button
+          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-duration-300 shadow-lg hover:shadow-xl"
+          id="addTaskBtn"
+        >
+          Add Task
+        </button>
+      </div>
+    </div>
+
+    <!-- Tasks Section -->
+    <div class="bg-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto">
+      <h3 class="text-2xl text-gray-800 font-bold mb-6">My Tasks</h3>
+      <div id="tasksList" class="flex flex-col gap-3">
+        <p class="text-gray-500 text-center py-8">
+          No tasks yet. Add one to get started!
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-8 mt-16">
+      <p>&copy; 2025 TodoFlow. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
